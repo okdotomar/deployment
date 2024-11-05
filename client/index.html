@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitter - Post Creation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!-- Left Sidebar -->
+        <aside id="sidebar">
+            <header id="header">
+                <h1>Kitter</h1>
+                <img src="Kitter.png" alt="Kitter Logo" class="logo">
+            </header>
+            <div id="posts">Posts</div>
+            <div id="profile">Profile</div>
+            <iframe  id="sandalgif" src="https://giphy.com/embed/8vQSQ3cNXuDGo" width="280" height="280" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-moment-remember-8vQSQ3cNXuDGo"></a></p>
+            <iframe src="https://giphy.com/embed/nR4L10XlJcSeQ" width="280" height="213" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/no-cat-nR4L10XlJcSeQ"></a></p>
+        </aside>
+
+        <!-- Middle Section -->
+        <main id="main">
+            <div class="post">
+                <div class="post-content">
+                  <!-- Your post content here -->
+                </div>
+                <div class="post-buttons">
+                  <button class="edit-button">Edit</button>
+                  <button class="delete-button">Delete</button>
+                </div>
+              </div>
+
+        </main>
+
+        <!-- Right Section -->
+        <aside id="right-sidebar">
+            <h2>Create Post</h2>
+            <h3>Username</h3>
+            <input type="text" id="username">
+            <h3>Meow!</h3>
+            <textarea id="post-content" placeholder="Write your post here..."></textarea>
+            <h3>Cat Name</h3>
+            <input type="text" id="cat-name">
+            <h3>Cat Color</h3>
+            <input type="text" id="cat-color">
+            <button id="create-post">Meow!</button>
+
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
