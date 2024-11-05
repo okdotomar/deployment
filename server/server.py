@@ -63,7 +63,7 @@ def delete_post(post_id):
 
 
 def run():    
-    app.run(port=8081)
+    app.run(port=8081, host="0.0.0.0")
 
 if __name__ == "__main__":
     run()

@@ -1,2 +1,4 @@
 flask
 postman
+pysqlite3
+sqlite3

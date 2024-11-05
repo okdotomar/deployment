@@ -1,5 +1,9 @@
 console.log("connected");
 
+const apiURL = window.location.protocol === 'file:'
+    ? 'http://localhost:8081'
+    : ''//domain name;
+
 const createPost = document.getElementById("create-post");
 let postReviewWrapper = document.querySelector("#main")
 let rightSidebar = document.querySelector("#right-sidebar");
