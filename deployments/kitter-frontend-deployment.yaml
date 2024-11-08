@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kitter-frontend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kitter-frontend
+  template:
+    metadata:
+      labels:
+        app: kitter-frontend
+    spec:
+      containers:
+      - name: kitter-frontend
+        image: sorenbybee/kitter-frontend-app
+        ports:
+        - containerPort: 8081

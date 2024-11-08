@@ -66,7 +66,7 @@ function addPost(data, index) {
         saveButton.onclick = function() {
             console.log(username.value, meowContent.value, catName.value, catColor.value, formattedDate);
             let editData = 'username=' + encodeURIComponent(username.value) + '&meow=' + encodeURIComponent(meowContent.value) + '&cat_name=' + encodeURIComponent(catName.value) + '&cat_color=' + encodeURIComponent(catColor.value) + '&date=' + encodeURIComponent(formattedDate);
-            fetch(`http://localhost:8081/kitter/posts/${postID}`, {
+            fetch(`/kitter/posts/${postID}`, {
                 method: "PUT",
                 body: editData,
                 headers: {
@@ -96,7 +96,7 @@ function addPost(data, index) {
         const userConfirmed = confirm("Are you sure you want to delete this post?");
         
         if (userConfirmed) {
-            fetch(`http://localhost:8081/kitter/posts/${data["id"]}`, {
+            fetch(`/kitter/posts/${data["id"]}`, {
                 method: "DELETE",
             })
             .then(function(response) {
@@ -126,7 +126,7 @@ function addPost(data, index) {
 
 function loadPosts() {
     postReviewWrapper.innerHTML = "";
-    fetch("http://localhost:8081/kitter/posts")
+    fetch("/kitter/posts")
     .then(function(response) {
         response.json()
         .then(function(data) {
@@ -146,7 +146,7 @@ function addNewPost(){
 
     //prep data
     let data = 'username=' + encodeURIComponent(username.value) + '&meow=' + encodeURIComponent(meowContent.value) + '&cat_name=' + encodeURIComponent(catName.value) + '&cat_color=' + encodeURIComponent(catColor.value) + '&date=' + encodeURIComponent(formattedDate);
-    fetch("http://localhost:8081/kitter/posts", {
+    fetch("/kitter/posts", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
