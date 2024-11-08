@@ -13,7 +13,7 @@ RUN npm install
 RUN npm install -g http-server
 
 # Make port 3000 available to the world outside this container
-EXPOSE 8080
+EXPOSE 8081
 
 # Run the app when the container launches
-CMD ["http-server", ".", "-p", "8080"]
+CMD ["http-server", ".", "-p", "8081"]

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-deployment
+  name: kitter-backend-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: kitter-backend
   template:
     metadata:
       labels:
-        app: backend
+        app: kitter-backend
     spec:
       containers:
-      - name: backend
+      - name: kitter-backend
         image: sorenbybee/kitter-backend-app
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
